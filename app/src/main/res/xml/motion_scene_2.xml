@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:motion="http://schemas.android.com/tools">
+
+    //blue to orange transition
+    <Transition
+            app:constraintSetStart="@id/s1"
+            app:constraintSetEnd="@id/s2"
+            app:duration="1000">
+        <KeyFrameSet>
+            <KeyAttribute
+                    app:framePosition="30"
+                    android:rotation="0"
+                    android:rotationY="15"
+                    android:translationX="-40dp"
+                    app:target="@id/v1" />
+        </KeyFrameSet>
+    </Transition>
+
+    //orange to blue transition
+    <Transition
+            app:constraintSetStart="@id/s2"
+            app:constraintSetEnd="@id/s1"
+            app:duration="1000">
+        <KeyFrameSet>
+            <KeyAttribute
+                    app:framePosition="70"
+                    android:rotation="0"
+                    android:rotationY="15"
+                    android:translationX="-40dp"
+                    app:target="@id/v1" />
+        </KeyFrameSet>
+    </Transition>
+
+    //orange to red transition
+    <Transition
+            app:constraintSetStart="@id/s2"
+            app:constraintSetEnd="@id/s3"
+            app:duration="1000">
+        <KeyFrameSet>
+            <KeyAttribute
+                    app:framePosition="30"
+                    android:rotation="0"
+                    android:rotationY="15"
+                    android:translationX="-40dp"
+                    app:target="@id/v2" />
+        </KeyFrameSet>
+    </Transition>
+
+    //red to orange transition
+    <Transition
+            app:constraintSetStart="@id/s3"
+            app:constraintSetEnd="@id/s2"
+            app:duration="1000">
+        <KeyFrameSet>
+            <KeyAttribute
+                    app:framePosition="70"
+                    android:rotation="0"
+                    android:rotationY="15"
+                    android:translationX="-40dp"
+                    app:target="@id/v2" />
+        </KeyFrameSet>
+    </Transition>
+
+    //states
+    <ConstraintSet android:id="@+id/s1">
+        <Constraint android:id="@id/v1"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:rotationY="0"
+                    android:translationX="0dp"/>
+        <Constraint android:id="@id/v2"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:rotationY="-15"
+                    android:translationX="250dp"/>
+        <Constraint android:id="@id/v3"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:rotationY="-15"
+                    android:translationX="500dp"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/s2">
+        <Constraint android:id="@id/v1"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:rotationY="0"
+                    android:translationX="-70dp"/>
+
+        <Constraint android:id="@id/v2"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:rotationY="0"
+                    android:translationX="0dp"/>
+
+        <Constraint android:id="@id/v3"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:rotationY="-15"
+                    android:translationX="250dp"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/s3">
+        <Constraint android:id="@id/v1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:rotationY="0"
+                    android:translationX="-140dp"/>
+
+        <Constraint android:id="@id/v2"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:rotationY="0"
+                    android:translationX="-70dp"/>
+
+        <Constraint android:id="@id/v3"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:rotationY="0"
+                    android:translationX="0dp"/>
+    </ConstraintSet>
+
+</MotionScene>

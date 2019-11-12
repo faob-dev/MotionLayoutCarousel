@@ -14,7 +14,7 @@
                     android:rotation="0"
                     android:rotationY="15"
                     android:translationX="-40dp"
-                    motion:target="@+id/v1" />
+                    motion:motionTarget="@+id/v1" />
         </KeyFrameSet>
     </Transition>
 
@@ -29,7 +29,7 @@
                     android:rotation="0"
                     android:rotationY="15"
                     android:translationX="-40dp"
-                    motion:target="@+id/v1" />
+                    motion:motionTarget="@+id/v1" />
         </KeyFrameSet>
     </Transition>
 
@@ -44,7 +44,7 @@
                     android:rotation="0"
                     android:rotationY="15"
                     android:translationX="-40dp"
-                    motion:target="@+id/v2" />
+                    motion:motionTarget="@+id/v2" />
         </KeyFrameSet>
     </Transition>
 
@@ -59,20 +59,20 @@
                     android:rotation="0"
                     android:rotationY="15"
                     android:translationX="-40dp"
-                    motion:target="@id/v2" />
+                    motion:motionTarget="@id/v2" />
         </KeyFrameSet>
     </Transition>
 
     //states
     <ConstraintSet android:id="@+id/s1">
         <Constraint android:id="@+id/v1">
-            <Transform motion:rotationY="0" motion:translationX="0dp"/>
+            <Transform android:rotationY="0" android:translationX="0dp"/>
         </Constraint>
         <Constraint android:id="@+id/v2">
-            <Transform motion:rotationY="-15" motion:translationX="250dp"/>
+            <Transform android:rotationY="-15" android:translationX="250dp"/>
         </Constraint>
         <Constraint android:id="@+id/v3">
-            <Transform motion:rotationY="-15" motion:translationX="500dp"/>
+            <Transform android:rotationY="-15" android:translationX="500dp"/>
         </Constraint>
     </ConstraintSet>
 
@@ -84,15 +84,15 @@
                     motion:layout_constraintEnd_toEndOf="parent"
                     motion:layout_constraintStart_toStartOf="parent"
                     motion:layout_constraintBottom_toBottomOf="parent">
-            <Transform motion:rotationY="0" motion:translationX="-70dp"/>
+            <Transform android:rotationY="0" android:translationX="-70dp"/>
         </Constraint>
 
         <Constraint android:id="@id/v2">
-            <Transform motion:rotationY="0" motion:translationX="0dp"/>
+            <Transform android:rotationY="0" android:translationX="0dp"/>
         </Constraint>
 
         <Constraint android:id="@id/v3">
-            <Transform motion:rotationY="-15" motion:translationX="250dp"/>
+            <Transform android:rotationY="-15" android:translationX="250dp"/>
         </Constraint>
     </ConstraintSet>
     <ConstraintSet android:id="@+id/s3">
@@ -103,7 +103,7 @@
                     motion:layout_constraintEnd_toEndOf="parent"
                     motion:layout_constraintStart_toStartOf="parent"
                     motion:layout_constraintBottom_toBottomOf="parent">
-            <Transform motion:rotationY="0" motion:translationX="-140dp"/>
+            <Transform android:rotationY="0" android:translationX="-140dp"/>
         </Constraint>
 
         <Constraint android:id="@id/v2"
@@ -113,11 +113,11 @@
                     motion:layout_constraintEnd_toEndOf="parent"
                     motion:layout_constraintStart_toStartOf="parent"
                     motion:layout_constraintBottom_toBottomOf="parent">
-            <Transform motion:rotationY="0" motion:translationX="-70dp"/>
+            <Transform android:rotationY="0" android:translationX="-70dp"/>
         </Constraint>
 
         <Constraint android:id="@id/v3">
-            <Transform motion:rotationY="0" motion:translationX="0dp"/>
+            <Transform android:rotationY="0" android:translationX="0dp"/>
         </Constraint>
     </ConstraintSet>
 
